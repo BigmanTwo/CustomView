@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MyEditext" />
-        <activity android:name=".MyViewGroupActivity"></activity>
+        <activity android:name=".MyViewGroupActivity" />
+        <activity android:name=".MyViewActivity"></activity>
     </application>
 
 </manifest>
