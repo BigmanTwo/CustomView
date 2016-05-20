@@ -107,8 +107,8 @@ public class MyView extends View {
         path.lineTo(width+offset,height-height*num/100);
         Log.d("d值",num+"");
         for (int i = 0; i < width/num2 ;i++) {
-            path.rQuadTo(-num2,-num1,-num2*5,0);
-            path.rQuadTo(-num2,num1,-num2*2,0);
+            path.rQuadTo(-num2,-num1*3,-num2*5,0);
+//            path.rQuadTo(-num2,num1,-num2*2,0);
 
         }
         path.close();
@@ -116,7 +116,8 @@ public class MyView extends View {
         canvas.restoreToCount(save);
         DecimalFormat fnum=new DecimalFormat("##0.00");
         String percent=fnum.format(num);
-        canvas.drawText(percent+"%",width/2,height/2,textPaint);
+        float lenght=textPaint.getFontSpacing();
+        canvas.drawText(percent+"%",width/2-lenght,height/2-lenght,textPaint);
     }
 
     Handler mHandler=new Handler(){

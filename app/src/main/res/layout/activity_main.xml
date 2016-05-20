@@ -26,4 +26,9 @@
       android:layout_height="wrap_content"
       android:id="@+id/view_but1"
       android:text="继承view控件"/>
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/touch_button"
+      android:text="点击事件监听"/>
 </LinearLayout>

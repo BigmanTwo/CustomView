@@ -10,8 +10,8 @@
     android:orientation="vertical"
     tools:context="com.example.asus.customview.MyViewActivity">
 <com.example.asus.customview.widget.MyView
-    android:layout_width="200dp"
-    android:layout_height="200dp"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
     android:id="@+id/myView"/>
     <Button
         android:layout_width="wrap_content"

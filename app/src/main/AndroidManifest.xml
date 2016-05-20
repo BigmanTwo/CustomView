@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".MyEditext" />
         <activity android:name=".MyViewGroupActivity" />
-        <activity android:name=".MyViewActivity"></activity>
+        <activity android:name=".MyViewActivity" />
+        <activity android:name=".OnTouchActivity"></activity>
     </application>
 
 </manifest>
