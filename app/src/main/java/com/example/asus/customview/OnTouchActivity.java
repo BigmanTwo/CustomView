@@ -3,13 +3,15 @@ package com.example.asus.customview;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
 public class OnTouchActivity extends AppCompatActivity {
     private Button mButton;
-    @Override
+    private GestureDetector mDetector;
+      @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_on_touch);
@@ -20,11 +22,31 @@ public class OnTouchActivity extends AppCompatActivity {
                 Log.d("Button","点击事件");
             }
         });
+        mDetector=new GestureDetector(this,new GestureDetector.SimpleOnGestureListener(){
+            @Override
+            public boolean onDoubleTap(MotionEvent e) {
+                Log.d("MainActivity","双击屏幕");
+                return super.onDoubleTap(e);
+            }
+
+            @Override
+            public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+                Log.d("MainActivity","手指快速滑动");
+                return super.onFling(e1, e2, velocityX, velocityY);
+            }
+
+            @Override
+            public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+                Log.d("MainActivity","手指滑动");
+                return super.onScroll(e1, e2, distanceX, distanceY);
+            }
+        });
     }
     //事件的消费机制
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        mDetector.onTouchEvent(event);
         switch (event.getAction()) {
             case MotionEvent.ACTION_UP:
                 Log.d("onTouch","OnTouchActivity的onTouchEvent方法抬起");

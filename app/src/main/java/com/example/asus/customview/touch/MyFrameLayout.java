@@ -79,8 +79,8 @@ public class MyFrameLayout extends FrameLayout{
             default:
                 break;
         }
-//        boolean b=super.onInterceptTouchEvent(ev);
-        boolean b=true;
+        boolean b=super.onInterceptTouchEvent(ev);
+//        boolean b=true;
         Log.d("onTouch","MyFrameLayout的onInterceptTouchEvent方法默认返回值"+b);
         return b;
     }
