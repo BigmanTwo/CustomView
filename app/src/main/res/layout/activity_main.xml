@@ -15,7 +15,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:id="@+id/view_but"
-      android:text="继承原生控件"/>
+      android:text="继承源生控件"/>
     <Button
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
